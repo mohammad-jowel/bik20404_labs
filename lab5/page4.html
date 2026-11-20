@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+</head>
+<body>
+    <a href="Lab5Main.html">Main page</a> <br>
+    
+    <form id="regForm">
+        Name: <input type="text" id="name"><br><br>
+        Activity: 
+        <select id="activity">
+        <option>Web Development Workshop</option>
+        <option>Robotics Competition</option>
+        <option>Cybersecurity Seminar</option>
+        </select><br>
+
+        <button type="submit">Register</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <script>
+        document.getElementById("regForm").onsubmit = function(e) {
+        e.preventDefault(); 
+        
+        let name = document.getElementById("name").value.trim();
+        let act = document.getElementById("activity").value;
+        let msg = document.getElementById("msg");
+
+        if (name === "") {
+            msg.innerText = "Error: Name cannot be empty!";
+            msg.style.color = "red";
+        } else {
+        
+            msg.innerText = "Confirmed: " + name + " registered for " + act;
+            msg.style.color = "green";
+        }
+        };
+  </script>
+</body>
+</html>

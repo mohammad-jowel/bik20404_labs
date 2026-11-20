@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+</head>
+<body>
+    <script>
+
+        const getBooks = async () => {
+            const bookListContainer = document.getElementById("booK-list");
+            try {
+                const res = await fetch("./books.json");
+                const books = await res.json();
+
+                console.log(books);
+            } catch (error) {
+                console.error(error);
+            }
+        };
+
+        getBooks();
+
+    </script>
+</body>
+</html>

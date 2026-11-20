@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration - UTHM Technology & Innovation Day 2026</title>
+</head>
+<body>
+
+    <header>
+        <h1>Registration</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="programme.html">Programme</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="registration.html">Registration</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+
+        <form>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <p>
+                    <label>Full Name:</label>
+                    <input type="text" name="fullname" minlength="3" maxlength="100" required>
+                </p>
+
+                <p>
+                    <label>Student/Staff ID:</label>
+                    <input type="text" name="studentID" minlength="5" maxlength="12" required>
+                </p>
+
+                <p>
+                    <label>Email:</label>
+                    <input type="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" name="phone" required>
+                </p>
+
+                <p>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" name="dob" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Participation</legend>
+
+                <p>Participant Type:</p>
+                <input type="radio" name="type" value="student" required>
+                <label>Student</label>
+                <input type="radio" name="type" value="staff">
+                <label>Staff</label>
+                <input type="radio" name="type" value="industry">
+                <label>Industry</label>
+                <input type="radio" name="type" value="visitor">
+                <label>External Visitor</label>
+
+                <p>Areas of Interest:</p>
+                <input type="checkbox" name="interest" value="ai">
+                <label>Artificial Intelligence</label>
+                <input type="checkbox" name="interest" value="se">
+                <label>Software Engineering</label>
+                <input type="checkbox" name="interest" value="cyber">
+                <label >Cybersecurity</label>
+                <input type="checkbox" name="interest" value="robotics">
+                <label>Robotics</label>
+                <input type="checkbox" name="interest" value="iot">
+                <label>Internet of Things</label>
+                <input type="checkbox" name="interest" value="data">
+                <label>Data Science</label>
+
+                <p>
+                    <label>Faculty:</label>
+                    <select name="faculty" required>
+                        <option value="">-- Select Faculty --</option>
+                        <option value="FSKTM">FSKTM</option>
+                        <option value="FKAAB">FKAAB</option>
+                        <option value="FAST">FAST</option>
+                        <option value="FPTP">FPTP</option>
+                        <option value="FTK">FTK</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Workshop Selection</legend>
+
+                <p>
+                    <label>Workshop:</label>
+                    <select name="workshop" required>
+                        <option value="">-- Select Workshop --</option>
+                        <option value="ai">AI Workshop</option>
+                        <option value="cyber">Cybersecurity Workshop</option>
+                        <option value="web">Web Development Workshop</option>
+                        <option value="iot">IoT Workshop</option>
+                        <option value="none">No Workshop</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label>Additional Comments:</label><br>
+                    <textarea name="comments" rows="5" cols="40"></textarea>
+                </p>
+            </fieldset>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy;UTHM</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222222;
+    margin: 0;
+}
+
+.profile {
+    max-width: 700px;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    margin: 30px auto;
+}
+
+
+p {
+    color: darkblue;
+}
+
+.introduction {
+    color: darkgreen;
+    line-height: 1.5;
+}
+
+#student-name {
+    font-size: 32px;
+    color: darkred;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.footer {
+    font-size: 14px;
+    color: #555555;
+    border-top: 1px solid #cccccc;
+    padding-top: 12px;
+}

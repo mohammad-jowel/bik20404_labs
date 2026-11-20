@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display book</title>
+</head>
+<body>
+    <h2 style="color: #294c60; font-family: Arial, sans-serif;">Select a Book</h2>
+    <select id="bookSelect" onchange="showBookDetails()" style="padding: 8px 10px; border: 1px solid #aab8c2; border-radius: 5px; font-size: 1rem;">
+        <option value="">-- Choose a Book --</option>
+    </select>
+
+    <div id="bookDetails" style="margin-top: 20px; padding: 14px 18px; max-width: 420px; background: #f3f7f9; border-left: 4px solid #5b8caa; border-radius: 5px; font-family: Arial, sans-serif;">
+        <p><strong>Title:</strong> <span id="displayTitle"></span></p>
+        <p><strong>Author:</strong> <span id="displayAuthor"></span></p>
+        <p><strong>Year:</strong> <span id="displayYear"></span></p>
+        <p><strong>Genre:</strong> <span id="displayGenre"></span></p>
+    </div>
+
+    <script>
+        let booksData = [];
+
+        async function loadBooks() {
+            let response = await fetch('https://mohammad-jowel.github.io/bik20404_lab6/books.json');
+            booksData = await response.json();
+            
+            let select = document.getElementById("bookSelect");
+            
+            booksData.forEach(book => {
+                let option = document.createElement("option");
+                option.value = book.title;
+                option.textContent = book.title;
+                select.appendChild(option);
+            });
+        }
+
+        loadBooks();
+
+        function showBookDetails() {
+            let selectedTitle = document.getElementById("bookSelect").value;
+            
+            let selectedBook = booksData.find(book => book.title === selectedTitle);
+
+            document.getElementById("displayTitle").textContent = selectedBook.title;
+            document.getElementById("displayAuthor").textContent = selectedBook.author;
+            document.getElementById("displayYear").textContent = selectedBook.publicationYear;
+            document.getElementById("displayGenre").textContent = selectedBook.genres.join(", ");
+        }
+    </script>
+</body>
+</html>

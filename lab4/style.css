@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color: #222222;
+    background-color: #f4f4f4;
+}
+
+.site-header,
+.site-footer {
+    background-color: #1f4e79;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.site-header h1,
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+.site-nav {
+    display: flex;
+    gap: 20px;
+    padding: 12px 20px;
+    background-color: #14344f;
+}
+
+.site-nav a {
+    color: white;
+}
+
+.page-layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.sidebar {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    align-self: flex-start;
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+
+.main-content {
+    flex: 1;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.course-card {
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+@media (max-width: 700px) {
+    .page-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: none;
+    }
+
+    .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-nav {
+        flex-wrap: wrap;
+    }
+}

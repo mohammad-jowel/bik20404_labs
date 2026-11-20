@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5</title>
+</head>
+<body>
+    <a href="Lab5Main.html">Main page</a> <br>
+    <h3 id="welcomeMessage">Welcome to UTHM Students Portal</h3>
+    <button id="cngMessageBtn">Change Weclome Message</button>
+
+    <script>
+        const cngMessageBtn = document.getElementById("cngMessageBtn");
+        const welcomeMessage = document.getElementById("welcomeMessage");
+        cngMessageBtn.addEventListener('click', () => {
+            welcomeMessage.innerHTML = "Have a Great Day, Student!";
+        })
+    </script>
+</body>
+</html>
